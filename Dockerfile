@@ -1,4 +1,4 @@
-FROM tensorflow:2.12.0
+FROM tensorflow/tensorflow:2.12.0
 
 # FROM python:3.9.16-slim
 
