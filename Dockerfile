@@ -4,11 +4,11 @@ WORKDIR /app
 
 RUN apt-get update
 
-RUN apt-get install git -v
+RUN apt-get install git -y
 
-RUN apt-get install wget -v
+RUN apt-get install wget -y
 
-RUN wget https://storage.googleapis.com/kalorize-test/model_vgg16_2.h5
+RUN wget https://storage.googleapis.com/kalorize-test/model_vgg16_2.h5 .
 
 COPY requirements.txt .
 
