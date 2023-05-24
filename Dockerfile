@@ -6,6 +6,8 @@ RUN apt-get update
 
 RUN apt-get install git -v
 
+RUN apt-get install wget -v
+
 RUN wget https://storage.googleapis.com/kalorize-test/model_vgg16_2.h5
 
 COPY requirements.txt .
