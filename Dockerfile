@@ -10,9 +10,19 @@ RUN apt-get install wget -y
 
 RUN wget https://storage.googleapis.com/kalorize-test/model_vgg16_2.h5 
 
-COPY requirements.txt .
+RUN pip install opencv-python
 
-RUN pip install -r requirements.txt
+RUN pip install git+https://github.com/rcmalli/keras-vggface.git
+
+RUN pip install mtcnn
+
+RUN pip install keras
+
+RUN pip install numpy
+
+RUN pip install tensorflow
+
+RUN pip install flask
 
 COPY prediction.py .
 
