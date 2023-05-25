@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install libgl1-mesa-glx git wget ffmpeg libsm6 lib
 
 RUN wget https://storage.googleapis.com/kalorize-test/model_vgg16_2.h5 
 
-RUN pip install opencv-python-headless
+RUN pip install opencv-contrib-python-headless
 
 RUN pip install git+https://github.com/rcmalli/keras-vggface.git
 
