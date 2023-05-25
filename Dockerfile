@@ -16,6 +16,8 @@ RUN pip install keras
 
 RUN pip install numpy
 
+RUN pip install keras_applications
+
 RUN pip install tensorflow
 
 RUN pip install flask
