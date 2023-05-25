@@ -2,13 +2,7 @@ FROM tensorflow/tensorflow:2.12.0
 
 WORKDIR /app
 
-RUN apt-get update
-
-RUN apt-get upgrade -y
-
-RUN apt-get install git -y
-
-RUN apt-get install wget -y
+RUN apt-get update && apt-get install git wget ffmpeg libsm6 libxext6 libgl1 -y
 
 RUN wget https://storage.googleapis.com/kalorize-test/model_vgg16_2.h5 
 
