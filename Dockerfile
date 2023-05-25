@@ -20,7 +20,7 @@ RUN pip install keras_applications
 
 RUN pip install tensorflow
 
-RUN pip install "Flask[async]”
+RUN pip install Flask[async]
 
 COPY prediction.py .
 
