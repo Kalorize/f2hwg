@@ -75,7 +75,3 @@ def recommendation(gender, weight, height, age, activity_level, target):
 
     return breakfast_similarity, lunch_similarity, dinner_similarity
 
-
-
-# breakfast, lunch, dinner = recommendation(
-#     gender, weight, height, age, activity_level, target)
