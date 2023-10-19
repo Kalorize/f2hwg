@@ -1,3 +1,11 @@
+---
+title: Kalorize
+emoji: 🐨
+colorFrom: green
+colorTo: gray
+sdk: docker
+pinned: false
+---
 # Kalorize Machine Learning API
 
 Machine learning models are developed by [@kentangtelo](https://github.com/kentangtelo) [@Ilhamaznumd](https://github.com/Ilhamaznumd) and deployed by [@handiism](https://github.com/handiism) [@fikri_barik](https://github.com/@fikri_barik) at Kalorize.
