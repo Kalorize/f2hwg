@@ -5,6 +5,7 @@ colorFrom: green
 colorTo: gray
 sdk: docker
 pinned: false
+app_port: 5000
 ---
 # Kalorize Machine Learning API
 
