@@ -1,36 +1,11 @@
 import os
 from dotenv import load_dotenv
 from flask import Flask, request, abort
-from prediction_hwg import predict
 from food_recommendation import recommendation
 import os
 
 load_dotenv()
 app = Flask(__name__)
-
-
-@app.post("/f2hwg")
-async def f2hwg():
-    api_key = request.headers.get("x-api-key", "")
-
-    if api_key != os.getenv("API_KEY"):
-        return abort(401)
-
-    f = request.files["picture"]
-
-    path = os.path.join(os.getcwd(), f.filename)
-
-    f.save(path)
-
-    height, weight, gender = predict(path)
-
-    os.remove(path)
-
-    return {
-        "height": round(float(height * 100)),
-        "weight": round(float(weight)),
-        "gender": gender,
-    }
 
 
 @app.post("/food_rec")

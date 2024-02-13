@@ -1,10 +1,7 @@
-FROM tensorflow/tensorflow:2.12.0
+FROM python:3.9.18-bullseye
 
 WORKDIR /app
 
-RUN apt-get update && apt-get install libgl1-mesa-glx git wget ffmpeg libsm6 libxext6 libgl1 python3-opencv -y
-
-RUN wget https://storage.googleapis.com/kalorize-test/model_vgg16_2.h5
 
 COPY requirements.txt .
 
@@ -16,7 +13,7 @@ COPY knn.pkl .
 
 COPY cleaned_recipes.csv .
 
-COPY prediction_hwg.py .
+# COPY prediction_hwg.py .
 
 COPY main.py .
 
